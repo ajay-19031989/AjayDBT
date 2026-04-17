@@ -19,3 +19,7 @@ models:
             tests:
                 - unique
                 - not_null
+
+    - name: data
+      columns:
+          - name: id
