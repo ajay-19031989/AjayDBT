@@ -2,24 +2,14 @@
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
+    - name: raw_customer
+      description: "my first model to read from source"
       columns:
-          - name: id
+          - name: c_customer_id
             description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: data
-      columns:
-          - name: id
+          - name: c_first_name
+            description: "Customer First Name"
+          - name: c_last_name
+            description: "Customer Last Name"
+          - name: c_birth_country
+            description: "Customer Birthday"

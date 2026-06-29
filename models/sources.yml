@@ -3,7 +3,8 @@ version: 2
 sources:
   - name: raw_data
     database: SNOWFLAKE_SAMPLE_DATA        # 👈 Your source Snowflake database
-    schema: TPCDS_SF10TCL
+    schema: TPCDS_SF100TCL
     tables:
       - name: CUSTOMER
       - name: CUSTOMER_ADDRESS
+      - name: CUSTOMER_DEMOGRAPHICS

@@ -40,7 +40,3 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
-    # Applies to all files under models/stage/
-    stage:
-      +materialized: table  
-      +schema: PUBLIC
