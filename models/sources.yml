@@ -8,3 +8,21 @@ sources:
       - name: CUSTOMER
       - name: CUSTOMER_ADDRESS
       - name: CUSTOMER_DEMOGRAPHICS
+  
+  - name: raw
+    database: TEST_DB        # 👈 Your source Snowflake database
+    schema: TEST_SCHEMA
+    tables:
+      - name: EMPLOYEES
+        columns:
+          - name: Name
+            description: "Name of the Employees"
+            tests: 
+              - not_null
+
+          - name: Gender
+            description: "Gender of the Employees"
+            tests: 
+              - not_null        
+      
+
