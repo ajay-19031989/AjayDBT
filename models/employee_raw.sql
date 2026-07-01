@@ -1,3 +1,3 @@
 {{ config(materialized='view') }}
 
-select name,gender,salary,bonus,team from {{ source('raw','EMPLOYEES') }}
+SELECT NAME,GENDER,SALARY,BONUS,TEAM FROM {{ source('raw','EMPLOYEES') }}

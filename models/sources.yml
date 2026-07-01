@@ -27,7 +27,7 @@ sources:
         config:                         # 👈 Use a config block for properties
           freshness:                    
             warn_after:
-              count: 6
+              count: 3
               period: hour
             error_after:
               count: 6
