@@ -7,7 +7,6 @@ sources:
     tables:
       - name: CUSTOMER
       - name: CUSTOMER_ADDRESS
-      - name: CUSTOMER_DEMOGRAPHICS
   
   - name: raw
     database: TEST_DB        # 👈 Your source Snowflake database
