@@ -1,40 +1,21 @@
 version: 2
 
 sources:
-  - name: raw_data
-    database: SNOWFLAKE_SAMPLE_DATA        # 👈 Your source Snowflake database
-    schema: TPCDS_SF100TCL
-    tables:
-      - name: CUSTOMER
-      - name: CUSTOMER_ADDRESS
-  
-  - name: raw
-    database: TEST_DB        # 👈 Your source Snowflake database
-    schema: TEST_SCHEMA
-    tables:
-      - name: EMPLOYEES 
-        columns:
-            - name: Name
-              description: "Name of the Employees"
-              tests: 
-                  - not_null
-            - name: Gender
-              description: "Gender of the Employees"
-              tests: 
-                  - not_null
-  
-        config:                         # 👈 Use a config block for properties
-          freshness:                    
-            warn_after:
-              count: 4
-              period: hour
-            error_after:
-              count: 6
-              period: hour
-          loaded_at_field: CREATE_DATE    
-      
-               
-        
+      - name: raw
+        database: ECOMMERCE_DBT
+        schema: RAW
+        tables:
+          - name: RAW_CUSTOMERS
+            description: This table contains customer information
+
+          - name: RAW_PRODUCTS
+            description: This table contains customer information
+
+          - name: RAW_ORDERS
+            description: This table contains order information
+
+          - name: RAW_ORDER_ITEMS
+            description: This table contains order items information
 
 
 
