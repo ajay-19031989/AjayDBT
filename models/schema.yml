@@ -5,23 +5,23 @@ models:
   - name: stg_customers
     config: 
       materialized: view
-      schema: STAGING
+      schema: staging
       description: "Cleaned up raw customers data"  
       
   - name: stg_products
     config: 
       materialized: view
-      schema: STAGING
+      schema: staging
       description: "Cleaned up raw customers data"  
 
   - name: stg_orders
     config: 
       materialized: view
-      schema: STAGING
+      schema: staging
       description: "Cleaned up raw customers data"  
 
   - name: stg_order_items
     config: 
       materialized: view
-      schema: STAGING
+      schema: public
       description: "Cleaned up raw customers data"         
