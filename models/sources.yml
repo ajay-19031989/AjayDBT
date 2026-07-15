@@ -17,6 +17,13 @@ sources:
           - name: RAW_ORDER_ITEMS
             description: This table contains order items information
 
+      - name: ops_raw
+        database: ECOMMERCE_DBT
+        schema: STAGING
+        tables:
+          - name: ticket_raw
+            description: This table contains ticket information
+
 
 
       
