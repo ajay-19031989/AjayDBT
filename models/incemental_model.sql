@@ -8,5 +8,4 @@ select ticket_number, state,updated_date from {{ source('ops_raw','ticket_raw') 
     (
         select max(updated_date) from {{ this }} 
     )
-
 {% endif %}
