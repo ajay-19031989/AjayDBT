@@ -2,8 +2,8 @@ version: 2
 
 sources:
       - name: raw
-        database: ECOMMERCE_DBT
-        schema: RAW
+        database: ECOMMERCE_DB
+        schema: PUBLIC
         tables:
           - name: RAW_CUSTOMERS
             description: This table contains customer information
@@ -18,11 +18,18 @@ sources:
             description: This table contains order items information
 
       - name: ops_raw
-        database: ECOMMERCE_DBT
-        schema: STAGING
+        database: ECOMMERCE_DB
+        schema: PUBLIC
         tables:
           - name: ticket_raw
             description: This table contains ticket information
+
+      - name: emp_raw
+        database: ECOMMERCE_DB
+        schema: PUBLIC
+        tables:
+          - name: employee
+            description: This table contains employee information      
 
 
 

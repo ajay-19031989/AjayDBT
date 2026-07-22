@@ -1,6 +1,6 @@
-{{ config(materialized='incremental',unique_key='ticket_number')}}
+{{ config(materialized='incremental',unique_key='id')}}
 
-select ticket_number, state,updated_date from {{ source('ops_raw','ticket_raw') }} 
+select id, status,updated_date from {{ source('ops_raw','ticket_raw') }} 
 
 {% if is_incremental() %}
  
