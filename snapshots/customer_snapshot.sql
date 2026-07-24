@@ -2,7 +2,7 @@
 
 {{ config
 (
-    target_schema='STAGING',
+    target_schema='PUBLIC',
     unique_key='customer_id',
     strategy='timestamp',
     updated_at='last_updated_date'   

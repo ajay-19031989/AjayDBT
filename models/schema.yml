@@ -1,1 +1,16 @@
-# Inside models/staging/schema.yml
+version: 2
+
+models:
+  - name: stg_customers
+    description: this model tests uniqueness of the customer information
+    columns:
+      - name: customer_id
+        tests:
+           - unique
+      - name: customer_email
+        tests:
+           - not_null
+
+  - name: stg_products
+    description:  this model tests uniqueness of the product information
+
